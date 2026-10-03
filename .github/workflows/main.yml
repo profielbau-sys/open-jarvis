@@ -19,8 +19,7 @@ jobs:
           
         
 
-      - name: Install SDK 34
-        run: sdkmanager "platforms;android-34" "build-tools;34.0.0"
+      
 
       - name: Gradle 8.2
         uses: gradle/actions/setup-gradle@v4
