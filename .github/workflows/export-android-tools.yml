@@ -22,6 +22,9 @@ jobs:
           cp "$PLATFORM_DIR/android.jar" out/android.jar
           cp "$BUILD_TOOLS_DIR/lib/d8.jar" out/d8.jar
           cp "$BUILD_TOOLS_DIR/lib/apksigner.jar" out/apksigner.jar
+          cp "$BUILD_TOOLS_DIR/aapt2" out/aapt2
+          cp "$BUILD_TOOLS_DIR/zipalign" out/zipalign
+          if [ -d "$BUILD_TOOLS_DIR/lib64" ]; then cp -a "$BUILD_TOOLS_DIR/lib64" out/lib64; fi
 
       - name: Upload tools
         uses: actions/upload-artifact@v4
